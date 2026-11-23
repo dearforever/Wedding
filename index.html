@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Suraj &amp; Punam · Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#2a0710;--wine:#420d19;--bur:#68182b;--gold:#c7a15a;--champ:#e6d2a3;--ivory:#f8f0e5;--cream:#e9d3a9;--text:#f4eadf;
+  --script:"Great Vibes","Snell Roundhand","Brush Script MT",cursive;
+  --serif:"Cormorant Garamond","Noto Serif Devanagari",Georgia,"Times New Roman",serif;
+  --label:"Cinzel","Trajan Pro",Georgia,serif;
+  --ease-open:cubic-bezier(.65,0,.35,1);--ease-soft:cubic-bezier(.22,1,.36,1);
+  --d1:.4s;--d2:.9s;--d3:1.4s;
+  --s1:8px;--s2:16px;--s3:24px;--s4:48px;--s5:70px;--w:520px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  background:var(--ox);color:var(--text);font:400 1.15rem/1.6 var(--serif);
+  background-image:radial-gradient(ellipse at 50% 0,rgba(140,30,30,.35),transparent 70%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23c7a15a' stroke-opacity='.13'%3E%3Cpath d='M40 6 58 40 40 74 22 40Z'/%3E%3Ccircle cx='40' cy='40' r='7'/%3E%3Cpath d='M0 0 12 12M80 0 68 12M0 80 12 68M80 80 68 68'/%3E%3C/g%3E%3C/svg%3E");
+}
+body.lock{overflow:hidden;height:100%}
+#app { width: 100%; overflow-x: hidden; position: relative; }
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--champ);outline-offset:3px}
+h1,h2,h3{font-weight:400}
+.lbl{font:600 .75rem/1.4 var(--label);letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.sec-icon{font-size:1.6rem;color:var(--gold);margin-bottom:6px;display:block}
+.btn{display:inline-block;min-height:48px;padding:12px 28px;border:0;border-radius:999px;cursor:pointer;text-decoration:none;
+  background:linear-gradient(180deg,#d6b46d,#b88f45);color:var(--ox);font:600 .78rem/1.6 var(--label);letter-spacing:.2em;text-transform:uppercase;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform var(--d1) var(--ease-soft),filter var(--d1)}
+.btn:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+section{max-width:var(--w);margin:auto;padding:var(--s5) var(--s3);text-align:center;position:relative}
+section h2{font:400 clamp(2.3rem,9vw,3.1rem)/1.15 var(--script);color:var(--champ);margin-bottom:var(--s1);text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.div{width:140px;height:14px;margin:var(--s2) auto var(--s3);background:linear-gradient(90deg,transparent,var(--gold),transparent) center/100% 1px no-repeat;position:relative}
+.div::after{content:"❤";position:absolute;left:50%;top:50%;font-size:.7rem;color:var(--gold);transform:translate(-50%,-50%);background:var(--ox);padding:0 6px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity var(--d2) var(--ease-soft),transform var(--d2) var(--ease-soft)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Entrance Curtain & Envelope ---------- */
+#ent{position:fixed;inset:0;z-index:90;overflow:hidden;transition:opacity .6s}
+#ent.done{opacity:0;pointer-events:none}
+.curtain{position:absolute;top:0;bottom:0;width:50.5%;z-index:1;
+  background:repeating-linear-gradient(90deg,#3c0a05 0,#7d2412 9px,#9a3218 15px,#6a1a0c 24px,#3c0a05 32px);
+  box-shadow:inset 0 -60px 80px rgba(0,0,0,.5);transition:transform var(--d3) var(--ease-open) .55s}
+.curtain.l{left:0;border-right:4px solid var(--gold)}
+.curtain.r{right:0;border-left:4px solid var(--gold)}
+.curtain::after{content:"";position:absolute;top:62%;width:14px;height:90px;border-radius:7px;background:linear-gradient(var(--champ),var(--gold));opacity:0;transition:opacity .6s 1.5s}
+.curtain.l::after{right:6%}.curtain.r::after{left:6%}
+#ent.go .curtain::after{opacity:1}
+#ent.go .curtain.l{transform:translateX(-88%)}
+#ent.go .curtain.r{transform:translateX(88%)}
+.flapw,.envb{position:absolute;inset:0;z-index:2;transition:transform var(--d2) var(--ease-open)}
+.flapw{filter:drop-shadow(0 4px 14px rgba(0,0,0,.6))}
+.flap,.envb{background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='110'%3E%3Cg fill='none' stroke='%23b88a45' stroke-opacity='.35' stroke-width='1.2'%3E%3Cpath d='M45 8C30 30 30 50 45 62 60 50 60 30 45 8Z'/%3E%3Cpath d='M45 62C35 80 25 84 10 82M45 62c10 18 20 22 35 20M45 20v50'/%3E%3C/g%3E%3C/svg%3E"),
+  linear-gradient(160deg,#f1dfb8,#e2c690 60%,#d9b982)}
+.flap{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,100% 56%,50% 70%,0 56%)}
+.envb{clip-path:polygon(0 59%,50% 73%,100% 59%,100% 100%,0 100%)}
+#ent.go .flapw{transform:translateY(-110%)}
+#ent.go .envb{transform:translateY(110%)}
+.med{position:absolute;top:44%;width:54px;height:84px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:radial-gradient(circle at 50% 50%,#b3263a 0,#6d0f1f 55%,#3a0610);z-index:2}
+.med.l{left:-27px}.med.r{right:-27px}
+.cap{position:absolute;left:0;right:0;top:37%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;transition:opacity .4s}
+.cap .inv-top{font:600 .68rem/1.4 var(--label);letter-spacing:.2em;color:#7a1a2a;text-transform:uppercase}
+.cap .mono{font:400 2.8rem/1 var(--script);color:#7a1a2a}
+.tap{background:none;border:0;cursor:pointer;padding:14px 22px;min-height:48px;color:#6b4a1a;font:600 .84rem var(--label);letter-spacing:.3em}
+.tap::before,.tap::after{content:"";display:block;width:95px;height:1px;margin:6px auto;background:#9a7330}
+#ent.go .cap{opacity:0}
+.cap .pulse{animation:pl 2.2s ease-in-out infinite}@keyframes pl{50%{opacity:.5}}
+#load{position:fixed;inset:0;z-index:100;background:#150307;display:grid;place-items:center;text-align:center;transition:opacity .6s}
+#load.off{opacity:0;pointer-events:none}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;overflow:hidden;
+  background:url("https://i.ibb.co/CppZvMY4/Picsart-26-10-31-13-35-36-289.jpg") center/cover no-repeat;}
+.hero::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(20,2,6,0.22) 0%, rgba(20,2,6,0.58) 100%); z-index:1;}
+.hero .floor{display:none;}
+.sc{display:none;}
+.urn{display:none;}
+.hc{position:relative;z-index:2;padding:var(--s4) var(--s3);text-align:center;width:100%;max-width:var(--w)}
+.invocation{font:600 .72rem/1.6 var(--label);letter-spacing:.22em;text-transform:uppercase;color:var(--champ);margin-bottom:4px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.swastik{font-size:1.35rem;color:var(--gold);letter-spacing:.15em;margin-bottom:10px;display:block;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.names{font:400 clamp(3.4rem,17vw,5.2rem)/1 var(--script);color:var(--ivory);margin:var(--s2) 0;text-shadow:0 3px 26px rgba(0,0,0,.7)}
+.names span{display:block}.names .amp{font-size:.5em;color:var(--gold);margin:-.1em 0}
+.sang-sub{font:600 1.05rem var(--serif);color:var(--champ);letter-spacing:.12em;margin-bottom:8px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.hc .sub{color:var(--champ);margin-bottom:var(--s1)}
+.hc .date{font:400 1.3rem var(--serif);letter-spacing:.12em;margin-bottom:var(--s3)}
+.scroll{position:absolute;bottom:calc(10% + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:2;text-decoration:none;text-align:center;color:var(--champ)}
+.scroll b{display:block;animation:bob 2s ease-in-out infinite;font-weight:400}@keyframes bob{50%{transform:translateY(5px)}}
+.hs{opacity:0;transform:translateY(18px);transition:opacity var(--d2) var(--ease-soft),transform var(--d2) var(--ease-soft)}
+.shown .hs{opacity:1;transform:none}
+.shown .hs:nth-child(1){transition-delay:.1s}.shown .hs:nth-child(2){transition-delay:.25s}.shown .hs:nth-child(3){transition-delay:.45s}
+.shown .hs:nth-child(4){transition-delay:.7s}.shown .hs:nth-child(5){transition-delay:.95s}.shown .hs:nth-child(6){transition-delay:1.15s}
+.shown .hs:nth-child(7){transition-delay:1.35s}.shown .hs:nth-child(8){transition-delay:1.5s}
+
+/* ---------- Couple & Parents Cards ---------- */
+.couple-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:var(--s3)}
+.couple-card{background:rgba(52,10,20,.65);border:1px solid rgba(199,161,90,.35);border-radius:18px;padding:22px 18px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.couple-card .role{font:600 .72rem var(--label);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.couple-card h3{font:400 2.3rem/1.15 var(--script);color:var(--ivory);margin-bottom:8px}
+.couple-card .parents{font-size:1.02rem;color:var(--champ);line-height:1.5}
+.couple-card .parents span{display:block;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--label);color:var(--gold);margin-bottom:4px}
+
+/* ---------- Countdown ---------- */
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:var(--s3) 0}
+.cd div{background:rgba(42,7,16,.75);border:1px solid rgba(199,161,90,.4);border-radius:12px;padding:16px 4px;box-shadow:inset 0 0 16px rgba(0,0,0,.4)}
+.cd b{display:block;font:600 1.8rem/1.1 var(--label);color:var(--champ);font-variant-numeric:tabular-nums}
+.cd small{font:400 .62rem var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- Scratch Card Section ---------- */
+.scratch-box{position:relative;width:280px;height:240px;margin:var(--s3) auto var(--s2);display:grid;place-items:center}
+.scratch-secret{position:absolute;inset:0;background:linear-gradient(145deg,rgba(70,14,26,.85),rgba(35,5,12,.95));border:1px solid var(--gold);border-radius:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;box-shadow:0 10px 25px rgba(0,0,0,.6)}
+.scratch-secret h4{font:600 1.05rem var(--label);color:var(--champ);letter-spacing:.15em;text-transform:uppercase}
+.scratch-secret .s-date{font:400 1.75rem var(--serif);color:var(--gold);margin:8px 0}
+.scratch-secret p{font-size:.95rem;color:var(--text);opacity:.9;line-height:1.4}
+#scratchCanvas{position:absolute;inset:0;width:100%;height:100%;border-radius:24px;cursor:grab;touch-action:none;z-index:3}
+
+/* ---------- Gallery / Moments ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:var(--s3)}
+.gallery-item{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:14px;border:1px solid rgba(199,161,90,.4);box-shadow:0 8px 20px rgba(0,0,0,.5);background:rgba(20,2,6,.6)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;display:block}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 25px rgba(42,7,16,.6);pointer-events:none}
+
+/* ---------- Program Timeline & Events ---------- */
+.tl-group{background:rgba(52,10,20,.6);border:1px solid rgba(199,161,90,.3);border-radius:18px;padding:22px;margin-bottom:20px;text-align:left}
+.tl-group .day-title{text-align:center;font:600 .85rem var(--label);letter-spacing:.2em;color:var(--champ);margin-bottom:14px;border-bottom:1px solid rgba(199,161,90,.25);padding-bottom:10px}
+.ev-item{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:12px 0}
+.ev-item:not(:last-child){border-bottom:1px dashed rgba(199,161,90,.2)}
+.ev-item .time{font:600 .78rem/1.4 var(--label);color:var(--gold)}
+.ev-item h4{font:600 1.35rem/1.2 var(--serif);color:var(--champ);margin-bottom:4px}
+.ev-item p{font-size:.98rem;opacity:.88}
+
+/* ---------- Venue & Map ---------- */
+.venue-card{background:rgba(50,10,20,.65);border:1px solid rgba(199,161,90,.35);border-radius:18px;padding:24px;margin-bottom:var(--s3)}
+.venue-card .v-tag{font:600 .72rem var(--label);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.venue-card h3{font:600 1.6rem var(--serif);color:var(--ivory);margin-bottom:8px}
+.venue-card address{font-style:normal;margin-bottom:16px;color:var(--champ);opacity:.92;line-height:1.6}
+.map-wrap{border-radius:14px;overflow:hidden;border:1px solid rgba(199,161,90,.4);box-shadow:0 8px 24px rgba(0,0,0,.5);height:220px;margin-bottom:18px}
+.map-wrap iframe{width:100%;height:100%;border:0}
+
+/* ---------- Family, Bal Manuhar & Contact ---------- */
+.fam-card{background:rgba(48,9,19,.7);border:1px solid rgba(199,161,90,.35);border-radius:18px;padding:22px;margin-bottom:18px}
+.fam-card h4{font:600 .82rem var(--label);color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+.fam-card p{font-size:1.12rem;color:var(--ivory);line-height:1.65}
+.kids-quote{margin-top:10px;padding:12px 14px;border-radius:12px;background:rgba(199,161,90,.12);border:1px dashed rgba(199,161,90,.45);color:var(--champ);font-style:italic;font-size:1.1rem}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:12px}
+.tel-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:1px solid rgba(199,161,90,.55);background:rgba(66,13,25,.85);color:var(--champ);text-decoration:none;font:600 .88rem var(--label);letter-spacing:.1em;transition:transform .25s,background .25s}
+.tel-pill:hover{background:var(--gold);color:var(--ox);transform:translateY(-2px)}
+
+/* ---------- Dress Code ---------- */
+.dress-card{background:rgba(42,7,16,.75);border:1px solid rgba(199,161,90,.3);border-radius:16px;padding:20px;margin-bottom:16px}
+.dress-card h4{font:600 .9rem var(--label);color:var(--gold);letter-spacing:.18em;margin-bottom:8px;text-transform:uppercase}
+
+/* ---------- RSVP Form ---------- */
+form{display:grid;gap:var(--s2);text-align:left;background:rgba(45,8,18,.75);padding:26px;border-radius:20px;border:1px solid rgba(199,161,90,.35)}
+label{font:600 .74rem var(--label);letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+input,select,textarea{width:100%;min-height:48px;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid rgba(199,161,90,.45);background:rgba(66,13,25,.8);color:var(--text)}
+textarea{min-height:96px;resize:vertical}
+select option{background:#2a0710;color:var(--text)}
+.err{color:#ff9e9e;font-size:.85rem;min-height:1.2em;margin-top:4px}
+#st{text-align:center;min-height:1.6em;font-weight:600}
+#st.ok{color:var(--champ)}#st.bad{color:#ff9e9e}
+
+/* ---------- Finale ---------- */
+.fin{min-height:75vh;display:grid;place-content:center;gap:var(--s2);background:radial-gradient(ellipse at 50% 100%,rgba(200,90,40,.3),transparent 70%)}
+.fin .names{font-size:clamp(3rem,14vw,4.8rem)}
+
+/* ---------- Sound Toggle ---------- */
+#snd{position:fixed;z-index:60;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));width:46px;height:46px;border-radius:50%;border:1px solid var(--champ);background:rgba(42,7,16,.85);color:var(--champ);cursor:pointer;font-size:1.15rem;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.4);backdrop-filter:blur(8px)}
+#snd.playing{background:var(--gold);color:var(--ox)}
+
+@media(min-width:768px){
+  :root{--w:640px}
+  .couple-grid{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .rv,.hs{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="lock">
+
+<!-- Preloader -->
+<div id="load" role="status"><div><p class="lbl">Jai Shree Ganesh · Preparing Invitation</p></div></div>
+
+<!-- Interactive Envelope Unveiling Modal -->
+<div id="ent" role="dialog" aria-modal="true" aria-label="Invitation cover" hidden>
+  <div class="curtain l"></div><div class="curtain r"></div>
+  <div class="envb"></div>
+  <div class="flapw"><div class="flap"></div><span class="med l"></span><span class="med r"></span></div>
+  <div class="cap">
+    <div class="inv-top">॥ 卐 ॥ Jai Shree Ganesh ॥ 卐 ॥</div>
+    <div class="mono" id="mono">S &amp; P</div>
+    <button id="open" class="tap" type="button"><span class="pulse">TAP TO OPEN</span></button>
+  </div>
+</div>
+
+<!-- Audio Toggle -->
+<button id="snd" type="button" aria-pressed="false" aria-label="Play background music">♪</button>
+
+<main id="app">
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <i class="sc l" aria-hidden="true"><i></i></i><i class="sc r" aria-hidden="true"><i></i></i>
+    <i class="urn l" aria-hidden="true"></i><i class="urn r" aria-hidden="true"></i>
+    <div class="floor" aria-hidden="true"></div>
+    <div class="hc" id="hc">
+      <p class="invocation hs">Jai Shree Ganesh · Jai Shree Shyam</p>
+      <span class="swastik hs">॥ 卐 ॥</span>
+      <p class="lbl hs sub">Shubh Vivah Invitation</p>
+      <h1 class="names hs"><span>Suraj</span><span class="amp">weds</span><span>Punam</span></h1>
+      <p class="sang-sub hs">Suraj संग Punam</p>
+      <p class="date hs">Monday, 07 December 2026</p>
+      <a class="btn hs" href="#scratch">Save the Date</a>
+      <a class="scroll hs" href="#msg" aria-label="Scroll to invitation"><span class="lbl">Scroll</span><b>⌄</b></a>
+    </div>
+  </header>
+
+  <!-- Joy, Welcome & Bride-Groom Details -->
+  <section id="msg" class="msg">
+    <span class="sec-icon rv">॥ 卐 ॥</span>
+    <h2 class="rv">With Joy &amp; Blessings</h2>
+    <div class="div rv"></div>
+    <p class="rv" style="font-size:1.22rem;line-height:1.8">
+      With the blessings of <strong>Lord Ganesha &amp; Khatu Shyam Ji</strong>, we cordially invite you and your family to grace the auspicious wedding ceremony of <strong>Suraj संग Punam</strong>.
+    </p>
+
+    <div class="couple-grid rv">
+      <div class="couple-card">
+        <div class="role">The Groom</div>
+        <h3>Suraj Teli</h3>
+        <div class="parents">
+          <span>Son of</span>
+          Sri. Monu Teli<br>
+          &amp; Srimati. Usha Teli
+        </div>
+      </div>
+
+      <div class="couple-card">
+        <div class="role">The Bride</div>
+        <h3>Punam Gupta</h3>
+        <div class="parents">
+          <span>Daughter of</span>
+          Sri. Kishor Gupta<br>
+          &amp; Srimati. Bobita Gupta
+        </div>
+      </div>
+    </div>
+
+    <p class="rv fam" style="margin-top:20px;color:var(--champ);font-style:italic">
+      Your gracious presence and warm blessings will make our celebration truly memorable.
+    </p>
+  </section>
+
+  <!-- Scratch to Reveal Section -->
+  <section id="scratch">
+    <span class="sec-icon rv">✨</span>
+    <h2 class="rv">Scratch to Reveal</h2>
+    <div class="div rv"></div>
+    <p class="rv" style="font-size:.95rem;opacity:.9">Rub the golden card below to reveal our Subh Vivah date!</p>
+    
+    <div class="scratch-box rv">
+      <div class="scratch-secret">
+        <h4>Subh Vivah</h4>
+        <div class="s-date">07 Dec 2026</div>
+        <p>Baraat at 7:00 AM<br>Terapath Bhawan, Nagaon</p>
+      </div>
+      <canvas id="scratchCanvas" width="280" height="240"></canvas>
+    </div>
+    <a href="#countdown" class="btn rv" style="margin-top:10px">View Countdown</a>
+  </section>
+
+  <!-- Photo Gallery Showcase -->
+  <section id="gallery">
+    <span class="sec-icon rv">📸</span>
+    <h2 class="rv">Cherished Moments</h2>
+    <div class="div rv"></div>
+    <p class="rv" style="font-size:.95rem;margin-bottom:10px">Glimpses of love leading to our forever</p>
+    
+    <div class="gallery-grid rv">
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/Jwk1z4F8/e6c3b3990e5ca0b21833ce8ba4394e87.jpg" alt="Wedding Couple Portrait" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/1G2vbbW2/94d3fb69c9491d89d3975d3537bd58c8.jpg" alt="Wedding Rings &amp; Hands" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/C3RS3dZb/85ad6f36433bd6c2e03174a3de6e927c.jpg" alt="Wedding Flowers Setup" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.ibb.co/XkzR4nDp/75485c40c639fd251d18267db9fee203.jpg" alt="Romantic Ceremony Moment" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown Timer -->
+  <section id="countdown">
+    <span class="sec-icon rv">⏳</span>
+    <h2 class="rv">Counting Down to Forever</h2>
+    <div class="div rv"></div>
+    <div class="cd rv" role="timer" aria-label="Time remaining until the wedding">
+      <div><b id="cd-days">00</b><small>Days</small></div>
+      <div><b id="cd-hrs">00</b><small>Hours</small></div>
+      <div><b id="cd-mins">00</b><small>Minutes</small></div>
+      <div><b id="cd-secs">00</b><small>Seconds</small></div>
+    </div>
+    <p class="lbl rv">Monday, 07 December 2026 · Baraat at 7:00 AM</p>
+  </section>
+
+  <!-- Wedding Timeline / Schedule -->
+  <section id="programme">
+    <span class="sec-icon rv">🕒</span>
+    <h2 class="rv">Wedding Events</h2>
+    <div class="div rv"></div>
+
+    <!-- Day 1 -->
+    <div class="tl-group rv">
+      <div class="day-title">SATURDAY · 05 DECEMBER 2026</div>
+      <div class="ev-item">
+        <div class="time">05 / 12 / 26</div>
+        <div>
+          <h4>Katha, Haldi &amp; Matkor</h4>
+          <p>Auspicious Katha, traditional Haldi ceremony, and Matkor rituals filled with joy and blessings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="tl-group rv">
+      <div class="day-title">SUNDAY · 06 DECEMBER 2026</div>
+      <div class="ev-item">
+        <div class="time">06 / 12 / 26</div>
+        <div>
+          <h4>Mehandi Ceremony</h4>
+          <p>Traditional henna art, folk melodies, and festive celebrations with family &amp; friends.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 (Wedding Day) -->
+    <div class="tl-group rv">
+      <div class="day-title">MONDAY · 07 DECEMBER 2026</div>
+      <div class="ev-item">
+        <div class="time">7:00 AM</div>
+        <div>
+          <h4>Baraat Departure</h4>
+          <p>The joyous wedding procession departs on 07/12/2026 at 7:00 AM.</p>
+        </div>
+      </div>
+      <div class="ev-item">
+        <div class="time">07 / 12 / 26</div>
+        <div>
+          <h4>Subh Vivah</h4>
+          <p>Sacred matrimonial rituals &amp; wedding ceremony at Terapath Bhawan (Jain Vivah Bhawan), Haibargaon, Nagaon.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4 (Reception) -->
+    <div class="tl-group rv">
+      <div class="day-title">FRIDAY · 11 DECEMBER 2026</div>
+      <div class="ev-item">
+        <div class="time">5:30 PM<br>Onwards</div>
+        <div>
+          <h4>Grand Reception</h4>
+          <p>Celebration dinner &amp; blessings at Own Residence, Bihari Basti, Barengapara, Dalu, West Garo Hill, Meghalaya – 794103.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue & Directions -->
+  <section id="venue">
+    <span class="sec-icon rv">📍</span>
+    <h2 class="rv">Wedding &amp; Reception Venues</h2>
+    <div class="div rv"></div>
+
+    <!-- Wedding Venue -->
+    <div class="venue-card rv">
+      <span class="v-tag">Wedding Venue · 07 Dec 2026</span>
+      <h3>Terapath Bhawan (Jain Vivah Bhawan)</h3>
+      <address>
+        Haibargaon, Nagaon<br>
+        Near Boy's School
+      </address>
+      <div class="map-wrap">
+        <iframe title="Wedding Venue Map" src="https://maps.google.com/maps?q=Terapanth+Bhawan+Haibargaon+Nagaon&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Terapath+Bhawan+Jain+Vivah+Bhawan+Haibargaon+Nagaon" target="_blank" rel="noopener noreferrer">Open Wedding Venue Map</a>
+    </div>
+
+    <!-- Reception Venue -->
+    <div class="venue-card rv">
+      <span class="v-tag">Reception Venue · 11 Dec 2026 · 5:30 PM Onwards</span>
+      <h3>Own Residence · Bihari Basti</h3>
+      <address>
+        Barengapara, Dalu, West Garo Hill,<br>
+        Meghalaya – 794103<br>
+        (At Bihari Basti, Own Residence from 5:30 PM onwards)
+      </address>
+      <div class="map-wrap">
+        <iframe title="Reception Venue Map" src="https://maps.google.com/maps?q=Barengapara+Dalu+West+Garo+Hills+Meghalaya+794103&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Barengapara+Dalu+West+Garo+Hill+Meghalaya+794103" target="_blank" rel="noopener noreferrer">Open Reception Venue Map</a>
+    </div>
+  </section>
+
+  <!-- Family, Bal Manuhar, Binati & Contact -->
+  <section id="family">
+    <span class="sec-icon rv">🙏</span>
+    <h2 class="rv">With Warm Regards</h2>
+    <div class="div rv"></div>
+
+    <!-- Binati / Request -->
+    <div class="fam-card rv">
+      <h4>Binati / Request</h4>
+      <p>
+        <strong>Sri. Monu Teli</strong><br>
+        <strong>Srimati. Usha Teli</strong>
+      </p>
+    </div>
+
+    <!-- Family Members -->
+    <div class="fam-card rv">
+      <h4>Family Members</h4>
+      <p>
+        Raj Kumar Sahu<br>
+        Lt. Dinanath Teli
+      </p>
+    </div>
+
+    <!-- Kids' Special Request -->
+    <div class="fam-card rv">
+      <h4>Little Hearts Waiting For You</h4>
+      <p><strong>Aarushi, Prem, Prachi &amp; Virat</strong></p>
+      <div class="kids-quote">
+        “Mele Mama &amp; Chacha ka shaddi ma Jarurr Aana aap Sab.”
+      </div>
+    </div>
+
+    <!-- Contact Numbers -->
+    <div class="fam-card rv">
+      <h4>Contact Numbers</h4>
+      <p style="font-size:.98rem;opacity:.88;margin-bottom:6px">Tap below to call for any assistance or directions</p>
+      <div class="contact-row">
+        <a class="tel-pill" href="tel:+918014488490">📞 8014488490</a>
+        <a class="tel-pill" href="tel:+918131823348">📞 8131823348</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dress Code -->
+  <section id="dresscode">
+    <span class="sec-icon rv">👔</span>
+    <h2 class="rv">Dress Code</h2>
+    <div class="div rv"></div>
+    <div class="dress-card rv">
+      <h4>Women</h4>
+      <p>Traditional Indian wear, festive sarees, lehengas, or elegant gowns.</p>
+    </div>
+    <div class="dress-card rv">
+      <h4>Men</h4>
+      <p>Ethnic kurta-pajama, sherwani, or formal suits.</p>
+    </div>
+  </section>
+
+  <!-- Gifts / Warm Note -->
+  <section id="gifts">
+    <span class="sec-icon rv">🎁</span>
+    <h2 class="rv">Gifts &amp; Blessings</h2>
+    <div class="div rv"></div>
+    <p class="rv" style="font-size:1.2rem;line-height:1.8">
+      "Your love, laughter, and presence on our special day are the greatest gifts we could ever ask for."
+    </p>
+  </section>
+
+  <!-- RSVP Section (Only Message Area) -->
+  <section id="rsvp">
+    <span class="sec-icon rv">✉</span>
+    <h2 class="rv">Send Your Wishes</h2>
+    <div class="div rv"></div>
+    <p class="rv" style="font-size:.95rem;margin-bottom:var(--s3)">Share your warm blessings &amp; confirm your presence for Suraj &amp; Punam</p>
+    
+    <form id="rsvpForm" class="rv" novalidate>
+      <div>
+        <label for="fm">Warm Wishes / RSVP Note</label>
+        <textarea id="fm" name="message" placeholder="Write your wishes or RSVP message here..." required></textarea>
+        <div id="fme" class="err"></div>
+      </div>
+      <button class="btn" type="submit" style="margin-top:10px">Send via WhatsApp</button>
+      <p id="st" role="status"></p>
+    </form>
+  </section>
+
+  <!-- Finale Section -->
+  <section id="finale" class="fin">
+    <p class="lbl rv">Jai Shree Ganesh · Jai Shree Shyam</p>
+    <h2 class="rv" style="font-size:2.8rem">We can’t wait to celebrate with you!</h2>
+    <p class="names rv"><span>Suraj &amp; Punam</span></p>
+    <p class="sang-sub rv">Suraj संग Punam</p>
+    <p class="lbl rv">07 December 2026</p>
+    <a class="btn rv" href="#hero" style="justify-self:center;margin-top:12px">Back to Top</a>
+  </section>
+</main>
+
+<script>
+/* =====================================================================
+   WEDDING CONFIGURATION
+   ===================================================================== */
+const CONFIG = {
+  names: ["Suraj", "Punam"],
+  dateTime: "2026-12-07T07:00",
+  timeZone: "Asia/Kolkata",
+  targetTimestamp: new Date("2026-12-07T07:00:00+05:30").getTime(),
+  whatsapp: "918014488490",
+  audioSrc: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_db6591201e.mp3?filename=romantic-wedding-harp-111452.mp3"
+};
+
+/* ---------- Countdown Timer ---------- */
+function initCountdown() {
+  const dEl = document.getElementById("cd-days");
+  const hEl = document.getElementById("cd-hrs");
+  const mEl = document.getElementById("cd-mins");
+  const sEl = document.getElementById("cd-secs");
+
+  function update() {
+    const diff = CONFIG.targetTimestamp - Date.now();
+    if (diff <= 0) {
+      document.getElementById("countdown").querySelector(".cd").innerHTML = "<p style='font-size:2rem;color:var(--champ);font-family:var(--script);grid-column:span 4'>Just Married!</p>";
+      return;
+    }
+    const secs = Math.floor(diff / 1000);
+    const d = Math.floor(secs / 86400);
+    const h = Math.floor((secs % 86400) / 3600);
+    const m = Math.floor((secs % 3600) / 60);
+    const s = secs % 60;
+
+    dEl.textContent = String(d).padStart(2, "0");
+    hEl.textContent = String(h).padStart(2, "0");
+    mEl.textContent = String(m).padStart(2, "0");
+    sEl.textContent = String(s).padStart(2, "0");
+  }
+  update();
+  setInterval(update, 1000);
+}
+initCountdown();
+
+/* ---------- Scratch to Reveal Canvas ---------- */
+function initScratch() {
+  const canvas = document.getElementById("scratchCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width, h = canvas.height;
+
+  // Golden glitter gradient overlay
+  const grad = ctx.createLinearGradient(0, 0, w, h);
+  grad.addColorStop(0, "#d4af37");
+  grad.addColorStop(0.3, "#f3e5ab");
+  grad.addColorStop(0.6, "#aa771c");
+  grad.addColorStop(1, "#c5a059");
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, w, h);
+
+  // Decorative text on scratch card
+  ctx.fillStyle = "#3c0a05";
+  ctx.font = "bold 14px 'Cinzel', serif";
+  ctx.textAlign = "center";
+  ctx.letterSpacing = "2px";
+  ctx.fillText("TAP OR SCRATCH HERE", w / 2, h / 2 - 12);
+  ctx.font = "24px sans-serif";
+  ctx.fillText("✨", w / 2, h / 2 + 22);
+
+  let isDrawing = false;
+  function getPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const cy = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+    return { x: cx * (canvas.width / rect.width), y: cy * (canvas.height / rect.height) };
+  }
+
+  function scratch(e) {
+    if (!isDrawing) return;
+    const { x, y } = getPos(e);
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.beginPath();
+    ctx.arc(x, y, 24, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  canvas.addEventListener("mousedown", e => { isDrawing = true; scratch(e); });
+  window.addEventListener("mouseup", () => isDrawing = false);
+  canvas.addEventListener("mousemove", scratch);
+
+  canvas.addEventListener("touchstart", e => { isDrawing = true; scratch(e); }, { passive: true });
+  window.addEventListener("touchend", () => isDrawing = false);
+  canvas.addEventListener("touchmove", scratch, { passive: true });
+}
+window.addEventListener("DOMContentLoaded", initScratch);
+
+/* ---------- Scroll Reveal Observer ---------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in");
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+/* ---------- Entrance Envelope, Curtains & Autoplay Music ---------- */
+const ent = document.getElementById("ent");
+const hero = document.getElementById("hero");
+const load = document.getElementById("load");
+const openBtn = document.getElementById("open");
+const sndBtn = document.getElementById("snd");
+
+const audio = new Audio(CONFIG.audioSrc);
+audio.loop = true;
+audio.preload = "auto";
+
+function revealHero() {
+  document.body.classList.remove("lock");
+  hero.classList.add("lit", "shown");
+}
+
+function openInvitation() {
+  if (ent.classList.contains("go")) return;
+  ent.classList.add("go");
+  
+  audio.play().then(() => {
+    sndBtn.classList.add("playing");
+    sndBtn.setAttribute("aria-pressed", "true");
+  }).catch(err => console.log("Audio playback blocked", err));
+
+  setTimeout(() => hero.classList.add("lit"), 1200);
+  setTimeout(() => {
+    revealHero();
+    ent.classList.add("done");
+    setTimeout(() => ent.remove(), 700);
+  }, 2200);
+}
+
+openBtn.addEventListener("click", openInvitation);
+
+setTimeout(() => {
+  load.classList.add("off");
+  ent.hidden = false;
+  openBtn.focus({ preventScroll: true });
+}, 900);
+
+/* ---------- Background Music Toggle Button ---------- */
+sndBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play().then(() => {
+      sndBtn.classList.add("playing");
+      sndBtn.setAttribute("aria-pressed", "true");
+    }).catch(err => console.log("Audio playback blocked", err));
+  } else {
+    audio.pause();
+    sndBtn.classList.remove("playing");
+    sndBtn.setAttribute("aria-pressed", "false");
+  }
+});
+
+/* ---------- RSVP Form Handling (Only Message) ---------- */
+const rsvpForm = document.getElementById("rsvpForm");
+const statusMsg = document.getElementById("st");
+
+rsvpForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const note = document.getElementById("fm").value.trim();
+
+  document.getElementById("fme").textContent = "";
+  statusMsg.textContent = "";
+
+  if (!note) {
+    document.getElementById("fme").textContent = "Please write a message.";
+    return;
+  }
+
+  const msgText = `💍 *Wedding Wishes for Suraj & Punam*\n*Message:* ${note}`;
+  
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msgText)}`, "_blank");
+  statusMsg.className = "ok";
+  statusMsg.textContent = "Thank you! Redirecting to WhatsApp...";
+  rsvpForm.reset();
+});
+</script>
+</body>
+</html>
